@@ -4,12 +4,15 @@
     <title>UserApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <%= yield %>
-  </body>
-</html>
+    <body>
+      <!-- ***** 以下を追加 ***** -->
+      <%= link_to "ユーザー一覧", users_path %> <%= link_to "新規登録", new_user_path %>
+      <hr>
+      <!-- ***** 以上を追加 ***** -->
+      <%= yield %>
+    </body>
+  </html>
