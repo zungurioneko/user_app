@@ -9,10 +9,7 @@
   </head>
   <body>
     <body>
-      <!-- ***** 以下を追加 ***** -->
-      <%= link_to "ユーザー一覧", users_path %> <%= link_to "新規登録", new_user_path %>
-      <hr>
-      <!-- ***** 以上を追加 ***** -->
+      <%= render "layouts/header" %>
       <%= yield %>
     </body>
   </html>
