@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def index
-    @user = User.new
-    @user = User.order(id: :asc)
+    @users = User.new
+    @users = User.order(id: :asc)
   end
 
   def show
@@ -24,6 +24,9 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    user = User.find(params[:id])
+    user.destroy!
+    redirect_to user
   end
 
   private

@@ -11,11 +11,11 @@
     <% @users.each.with_index(1) do |user, i| %>
       <tr>
         <th scope="row"><%= i %></th>
-        <td><%= User.name %></td>
+        <td><%= user.name %></td>
         <td>
           <%= link_to "詳細", user %>
           <%= link_to "編集", edit_user_path(user) %>
-          <%= link_to "削除", method: :delete, data: {confirm: "削除しますか？" } %>
+          <%= link_to "削除", user, method: :delete, data: {confirm: "削除しますか？" } %>
         </td>
       </tr>
     <% end %>
