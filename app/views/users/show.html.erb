@@ -1,4 +1,10 @@
-<h1>ユーザー詳細</h1>
-<p>名前 <%= @user.name %></p>
-<p>メールアドレス <%= @user.email %></p>
-<p>年齢 <%= @user.age %></p>
+<h1 class="text-center">ユーザー詳細</h1>
+<section class="card border-dark mt-5">
+  <div class="card-header">
+    <h4><%= @user.name %></h4>
+  </div>
+  <div class="card-body">
+    <p class="card-text"><%= simple_format(h @user.email) %></p>
+    <p class="card-text"><%= simple_format(h @user.age) %></p>
+  </div>
+</section>
